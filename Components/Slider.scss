@@ -14,20 +14,37 @@
         position: relative;
         overflow: hidden;
         .swiper-button-prev, .swiper-button-next{
-            display:none;
-            background: rgba(0,0,0,.7);
-            width: 50px;
-            height: 100px;
-            margin-top: -50px;
-            line-height: 100px;
+            /*display:none;*/
+            background: transparent;
+            width: 40px; 
+            height: 40px;
+            margin-top: 0px;
+            line-height: 40px;
             z-index: 3;
-            i:before{ color: #ffffff; }
+            border-radius: 100%;
+            opacity: 0;
+            @include transition(opacity .2s ease);
         }
         .swiper-button-prev {
-            left: -55px;
+            left: 15px;
+                i { 
+                    margin-right: 3px;
+                    &:before {
+                        content:''; width:40px; height: 65px; display: inline-block; background:url(#{$baseHref + "/images/frontend/slider-arrow.png"}) no-repeat left top;
+                    }
+                }
+                &:hover {
+                    
+                }
         }
         .swiper-button-next{
-            right: -55px;
+            right: 15px; 
+                i {
+                    margin-left: 3px;
+                    &:before {
+                        content:''; width:40px; height: 65px; display: inline-block; background:url(#{$baseHref + "/images/frontend/slider-arrow.png"}) no-repeat right top;
+                    }
+                }
         }
     }
     .swiper-slide{
@@ -46,21 +63,6 @@
             /*-webkit-filter: grayscale(1);
             filter: grayscale(1);*/
         }
-        /*
-        .htmlContent {
-            position: relative;
-            height: 360px;
-            width: 100%;
-            border-radius: 3px;
-            vertical-align: middle;
-            overflow: hidden;
-            a {
-                display: table-cell;
-                vertical-align: middle;
-                width:100%;
-                text-align: center; 
-            }
-        }*/
         .swiper-slide-container {
             /*padding: 5px;*/
             > a{ display: block; }
@@ -91,6 +93,10 @@
                     span {
                         background: #fff;
                         color: $title;
+                    }
+                    b {
+                        border-color: #fff;
+                        color: #fff; 
                     }
                 }
             }
@@ -523,6 +529,11 @@
             }
         }
     }
+    &:hover {
+        .swiper-button-prev, .swiper-button-next {
+            opacity:1;
+        }
+    }
 }
 
 .mobile-cat-slider{
@@ -630,7 +641,7 @@
             .swiper-button-prev, .swiper-button-next{
                 display: none;
             }
-        }
+        } 
         &.swiper-container-horizontal {
             > .swiper-pagination-bullets{   
                 .swiper-pagination-bullet{

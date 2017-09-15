@@ -27,12 +27,20 @@
             }
         }
         .ems-grid-price {
-            width: 20%;
+            width: 15%;
             padding-left: 10px !important;
         }
         .ems-grid-price-total {
-            width: 20%;
+            width: 15%;
             padding-left: 10px !important;
+        }
+        .ems-grid-store {
+            width: 10%;
+            padding-left: 10px !important;
+            text-align: center;
+            img {
+                width: 60px;
+            }
         }
         .ems-grid-delete {
             width: 8%;
@@ -242,12 +250,6 @@
                     line-height: 1;
                 }
             }
-            /*.d {
-                font-size: 12px; 
-                position: relative;
-                top: 2px;
-                vertical-align: super;
-            }*/
         }
         .ems-address-name {
             font-family: $fM;
@@ -298,6 +300,12 @@
                     }
                 }
             }
+        }
+        &.esi5 {
+            .vtzLogo {display: inline-block;}
+        }
+        &.esi4 {
+            .rctLogo {display: inline-block;}
         }
     }
     &.sitePuan {
@@ -494,12 +502,6 @@
             .brutFiyat {display:none !important;}
             .brutFiyatVrg {
                 display:block !important;
-                    /*.d {
-                        font-size: 12px; 
-                        position: relative;
-                        top: 2px;
-                        vertical-align: super;
-                    }*/
                 }
         }
         .ems-grid-price-total {
@@ -806,12 +808,18 @@
                 text-align: left;
             }
             .ems-grid-piece {
-                width: 15%;
+                width: 20%;
                 text-align: left;
-                margin-left: 25%;
+                margin-left: 20px;
+            }
+            .ems-grid-store {
+                display: block;
+                width:auto;
+                padding:0 0 0 20px !important;
+                text-align: left;
             }
             .ems-grid-price {
-                width: 30%;
+                width: 40%;
                 text-align: right;
             } 
             .ems-grid-price-total {

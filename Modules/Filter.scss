@@ -214,65 +214,6 @@
     }
 
 
-/*
-.kutuOzellikFiltre {
-    color: #333;
-    line-height: 1;
-    a {text-decoration: none;}
-    table {width: 100%;}
-    #dvUrunKiyaslamaOzellik {
-        .urunKiyaslamaOzellik_ozellikAd {
-            position: relative;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 20px 0;
-            > span {display: none !important;}
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-            }
-            &.kapali {
-                &:after {
-                    content: ""
-                } 
-            }
-        }
-        .urunKiyaslamaOzellik_ozellikIcerik {
-            padding-bottom: 10px;
-            .urunKiyaslamaOzellik_ozellik {
-                font-size: 14px;
-                .urunKiyaslamaOzellik {
-                    position: relative;
-                    display: inline-block;
-                    padding: 2px 0 2px 20px;
-                    margin: 2px 0;
-                    &.link_selected {
-                        font-weight: bold;
-                    }
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        margin-top: -7px;
-                    }
-                }
-                .filter-qty {
-                    display: inline-block;
-                }
-            }
-        }
-    }
-    .ayiracOzellikGrup {
-        border-bottom: 1px solid #ebebeb;
-    }   
-    .kutuHeaderOzellikFiltre, .ayiracOzellik, .urunKiyaslamaOzellik_temizle {
-        display: none !important;
-    }
-}
-*/
-
 @media screen and (max-width:960px) {
 
     .prdSortMenu {

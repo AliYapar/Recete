@@ -211,6 +211,26 @@
             div:first-child{
                 border-top: none;
             }
+            .esi4 {
+                &:before {
+                    content:''; 
+                    width:80px; 
+                    height: 25px; 
+                    display: inline-block; 
+                    background:url(#{$baseHref + "/images/frontend/svg/logo.svg"}) no-repeat left top;
+                    background-size: contain;
+                }
+            }
+            .esi5 {
+                &:before {
+                    content:''; 
+                    width:80px; 
+                    height: 30px; 
+                    display: inline-block; 
+                    background:url(#{$baseHref + "/images/frontend/svg/vitezon.svg"}) no-repeat left top;
+                    background-size: contain;
+                }
+            }
         }
     }
 }

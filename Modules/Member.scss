@@ -44,16 +44,6 @@
             position: relative;
             @include transition(all 0.2s ease);
         }
-        /*&:after{
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 12px;
-            background: $dBlue;
-            @include transition(all 0.2s ease);
-        }*/
     }
 
     .sub .ems-form {display: none;}
@@ -160,18 +150,6 @@
                 font-size: 20px;
             }
         }
-        /*
-            i:before {
-                content: "\e92c";
-                font-family: 'icomoon';
-                font-size:28px;
-                color:#fff;
-                position: relative;
-                top: 0px;
-                left: 0px;
-                @include transition(all 0.2s ease);
-            }
-        */
             .member-account {
                 margin-right: 10px;
                 font-size: 14px;
@@ -183,18 +161,6 @@
                 vertical-align: middle;
                 @include transition(all 0.2s ease);
             }
-            /*
-            &:after{
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                width: 100%;
-                height: 12px;
-                background: $dBlue;
-                @include transition(all 0.2s ease);
-            } 
-            */
         }
         .kutuUyeGiris_profilFoto {
             display:block !important;
@@ -1174,23 +1140,6 @@
                 font-family: $fM;
                 white-space: nowrap;
                 text-align: center;
-                /*> span:before {
-                    content: 't';
-                    font-family: 'tl';
-                    font-size: 13px;
-                    font-weight: normal;
-                    display: inline-block;
-                    float: left;
-                    position: relative;
-                    left: -5px;
-                    top: 3px;
-                }
-                .d {
-                        font-size: 11px; 
-                        position: relative;
-                        top: 3px;
-                        vertical-align: super;
-                    }*/
                 span:empty {
                     &:before {display:none;} 
                 }
@@ -1331,23 +1280,7 @@
                     white-space: nowrap;
                     text-align: left;
                     padding-left: 15px !important;
-                    /*> span:before {
-                        content: 't';
-                        font-family: 'tl';
-                        font-size: 13px;
-                        font-weight: normal;
-                        display: inline-block;
-                        float: left;
-                        position: relative;
-                        left: -4px;
-                        top: 4px; 
-                    }*/
-                    /*.d {
-                        font-size: 12px; 
-                        position: relative;
-                        top: 3px;
-                        vertical-align: super;
-                    }*/
+                    
                     span:empty {
                         &:before {display:none;} 
                     }
@@ -2353,56 +2286,6 @@ body.sip-ajx-loading {
                 text-align: center;
             }
             ul {display:none;}
-            /*
-            ul {
-                display: none;
-                padding-top: 0;
-                li {
-                    padding-left: 0;
-                    a {
-                        background: $lines;
-                        padding: 20px 30px;
-                        font-size: 16px;
-                        text-transform: uppercase;
-                        font-family: $fD;
-                        &:before {
-                            right: 20px;
-                        }
-                    }
-                    &.selected {
-                        display: none;
-                    }
-                }
-            }
-            .mobile-title {
-                position: relative;
-                display: block;
-                cursor: pointer;
-                padding: 0 20px 10px 20px;
-                font-size: 24px;
-                height: auto;
-                text-transform: uppercase;
-                border: none;
-                background: #fff;
-                font-family: $fM;
-                color: $title;
-                font-weight: normal;
-                &:before {
-                    content: "\e933"; 
-                    font-family: 'icomoon';
-                    position: absolute;
-                    right: 30px;
-                    top: -5px;
-                    font-size: 12px;
-                    margin-top: -6px;
-                    color: inherit;
-                }
-            }
-            &.opened {
-                ul {
-                    display: block;
-                }
-            }*/
         }
 
         //adres bilgilerim

@@ -316,6 +316,7 @@
         ul {
             li {
                 overflow: hidden; 
+                max-width: 33.333%;
                 a {
                     display: inline-block;
                     width: 100%;
@@ -543,6 +544,14 @@
                     }
                 }
             }
+        .listBottomBtn {
+            display: none !important;
+        }
+    }
+    .kutuEncokSatan {
+        .listBottomBtn {
+            display: none !important;
+        }
     }
     .urunTab {
         .pnlTabs {
@@ -622,5 +631,33 @@
     } 
     .mainBlog .swiper-inner {
         overflow: hidden;
+        ul li {
+            max-width: 100%; 
+        }
+    }
+    
+    .kutuYeniUrun {
+        .kutuHeaderYeniUrun {
+            padding-left: 0px; 
+        }
+        .ems-prd{
+            display:none !important;
+            &:nth-child(1) {display:inline-block !important;}
+            &:nth-child(2) {display:inline-block !important;}
+            &:nth-child(3) {display:inline-block !important;}
+            &:nth-child(4) {display:inline-block !important;}
+        }
+    }
+    .kutuEncokSatan {
+        .cokSatan_header { 
+            padding-left: 0px; 
+        }
+        .ems-prd{
+            display:none !important;
+            &:nth-child(1) {display:inline-block !important;}
+            &:nth-child(2) {display:inline-block !important;}
+            &:nth-child(3) {display:inline-block !important;}
+            &:nth-child(4) {display:inline-block !important;}
+        }
     }
 }

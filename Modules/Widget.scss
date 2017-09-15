@@ -1,4 +1,12 @@
   /********** visilabs widget **********/
+
+.widget {
+   &.no-controls {
+       .ems-prd {
+            width: 300px;
+        }
+    }
+}
   
 .ems-tab{
     &-featured {
@@ -247,6 +255,16 @@
     }
 }
 
+.no-swiper {
+    .swiper-wrapper {
+        display: inline-block;
+        .ems-prd {
+            display: inline-block;
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {display:none;}
+}
+
 @media screen and (max-width:960px) {
     .related-products-widget {
         .swiper-title {
@@ -328,5 +346,22 @@
     }
     .ems-prd .listBottomBtn .ems-prd-addBasket .urunListe_stokHaberci a {
         background: none !important;
+    }
+    .no-swiper {
+        .swiper-wrapper {
+            .ems-prd {
+                width: 33.333%
+            }
+        }
+    }
+}
+@media screen and (max-width:640px) {
+
+    .no-swiper {
+        .swiper-wrapper {
+            .ems-prd {
+                width: 50%
+            }
+        }
     }
 }

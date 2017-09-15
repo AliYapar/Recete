@@ -47,7 +47,10 @@
         padding-top: 30px;
         .logo {
             float: left;
-        a { display: block; padding: 0; }
+        a { 
+            display: none;
+            padding: 0; 
+            }
         }
     }
     .ems-col-1 {
@@ -161,7 +164,7 @@
     background: $lightBg;
     display: inline-block;
     width: 100%;
-    padding: 0px 0 0 0;
+    padding: 5px 0 0 0;
     .topHeader {
         .topHeaderLeft {
             float:left;
@@ -278,7 +281,7 @@
         vertical-align: middle;
         text-align: center;
         a{
-            display: inline-block;
+            /*display: inline-block;*/
             span {
                 font-size:32px;
                 white-space: nowrap;
@@ -323,6 +326,7 @@
             position:relative;
             z-index: 1;
             letter-spacing: 0.2px;
+            vertical-align: top;
              &:before {
                 content:'';
                 position:absolute;
@@ -470,7 +474,7 @@
                     .allPrd {
                         width:100%;
                         border-top:1px solid $borderColor;
-                        padding:20px;
+                        padding:16px;
                         position:absolute;
                         bottom:0;
                         left: 0px;
@@ -618,327 +622,11 @@
 .menuSpecial {display:none;}
 
 
-/*Header Kategori Menü
-.nav-main {
-    float: left;
-    .cat-menu-holder {
-        margin-left: 20px;
-    }
-    .btn-cat-menu{
-        display: block;
-        padding: 14px 15px 14px 11px;
-        border-radius: 3px;
-        position: relative;
-        @include transition(all 0.2s ease);
-        &:after{
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 12px;
-            background: $dBlue;
-            @include transition(all 0.2s ease);
-        }
-        i.icon-ico_menu, span {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        i.icon-ico_menu{
-            margin-right: 10px;
-            &:before{
-                font-size: 15px;
-                color: #ffffff;
-                @include transition(all 0.3s ease);
-            }
-        }
-        span{
-            font-size: 18px;
-            color: #ffffff;
-            font-family: $fM;
-            @include transition(all 0.2s ease);
-        }
-        span.prd-txt { display: none; }
-    }
-    .cat-menu-holder.opened {
-        .btn-cat-menu {
-            background: #ffffff;
-            &:after{ background: #ffffff; }
-            i.icon-ico_menu {
-                &:before{ color: $dBlue; }
-            }
-            span { color:$dBlue; }
-        }
-       .cat-menu { display: block; }
-    }
-    .cat-menu {
-        position:absolute;
-        background:#ffffff;
-        margin: 10px 0 0 170px;
-        min-height: 609px;
-        max-width: 1070px;
-        left: 0;
-        z-index: 20;
-        border-radius: 0 3px 3px 3px;
-        display: none;
-        &-top-link{
-            max-width: 300px;
-            width: 100%;
-            display: table;
-            table-layout: fixed;
-            border-bottom: 1px solid $borderColor;
-            border-right: 1px solid $borderColor;
-            z-index: 20;
-            position: relative;
-            li{
-                display: table-cell;
-                vertical-align: middle;
-                a { 
-                    font-size: 12px; 
-                    color: $dBlue; 
-                    font-family: $fM; 
-                    display: block; 
-                    text-align: center; 
-                    padding: 18px 0; 
-                    &:hover {
-                        color: $lBlue;
-                    }
-                }
-            }
-            li.catBack { display: none; }
-        }
-        &-lvl-1{
-            > li > a { 
-                display: inline-block;
-                font-size: 14px;
-                color: $text;
-                padding: 16px 23px 16px 27px;
-                position: relative;
-                z-index: 20;
-                max-width: 300px;
-                width: 100%;
-                border-right: 1px solid $borderColor;
-                i{ margin-right: 30px; display: inline-block; vertical-align: middle; }
-                i:before{ color: $lBlue; @include transition(all 0.2s ease); font-size: 30px; }
-            }
-            > li.selected > a, > li > a:hover{ background:$lBlue; color: #ffffff; border-right: none; }
-            > li.selected > a, > li > a:hover{ i:before{ color:#ffffff; } }
-            > li.selected .cat-menu-lvl-2{ 
-                display: block;
-                &:before {
-                        content: '';
-                        width: 1px;
-                        height: 100%;
-                        background: $borderColor;
-                        position: absolute;
-                        left: 298px;
-                        top: 0;
-                    } 
-                }
-        }
-        &-lvl-2 {
-            display:block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #ffffff;
-            display: none;
-            padding: 30px 30px 30px 330px;
-            z-index: 19;
-            min-height: 609px;
-            width: 100%;
-            max-width: 1050px;
-            min-width: 1050px;
-            border-radius: 0 3px 3px 3px;
-            &-back, .cat-menu-lvl-3-back, .all-cat-links{ display: none; }
-            .cat-list > ul > li {
-                width: 50%;
-                display: inline-block;
-                vertical-align: top;
-                margin-bottom: 10px;
-                position: relative;
-                    &:hover { 
-                        .prd-img {
-                            a {
-                                img {
-                                    transform: scale(1.2);
-                                }
-                            }
-                        }
-                        .cat-name {
-                            a {
-                                color: $dBlue;
-                            }
-                        }
-                    }
-            }
-            .cat-list {
-                .prd-img {
-                    float: left;
-                    width: 80px;
-                    img { max-width: 80px; @include transition(all .32s ease); }
-                }
-                .cat-name {
-                    a { 
-                        font-size: 14px;
-                        color: $lBlue;
-                        font-family: $fM;
-                        padding:5px 0;
-                        display: block;
-                    }
-                }
-                .prd-brands {
-                    max-height: 40px;
-                    overflow: hidden;
-                    ul li {
-                        display: inline-block;
-                        vertical-align: middle;
-                        a{ 
-                            font-size: 12px;
-                            color: $text;
-                            display: block;
-                            padding: 3px 5px 3px 0;
-                            &:before{
-                                content: ',';
-                                display: inline-block;
-                                vertical-align: text-bottom;
-                                font-size:12px;
-                                color:$text;
-                                position: relative;
-                                left: -5px;
-                            }
-                            &:hover {
-                                color: $lBlue;
-                            }
-                        }
-                        &:first-child{
-                            a:before{ display: none; }
-                        }
-                    }
-                }
-                .prd-content {
-                    padding: 10px 10px 10px 90px;
-                    min-height: 65px;
-                }
-            }
-        }
-    }
-}
-*/
-
- /*Mobile Header */
 .ems-smart-header {display: none;}
 
-/*
-.mbHeader {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    height: 60px;
-    left: 0;
-    padding:15px 0px 14px 0px;
-    background: $dBlue;
-    z-index: 50;
-    .mBurger {
-        width: 65px;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: left;
-            a {
-                display: inline-block;
-                padding: 6px 0;
-                &:before {
-                    content:'\e91a';
-                    font-family: 'icomoon';
-                    font-size:25px;
-                    color: #ffffff;
-                }
-            }
-    }
-    .mbCart {
-        width: 55px;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: right;
-        padding-right: 15px;
-            a {
-                display: inline-block;
-                position: relative;
-                    &:before {
-                    content: "\e901";
-                    font-family: 'icomoon';
-                    font-size: 25px;
-                    color: #ffffff;
-                    }
-                    b {
-                        position: absolute;
-                        top: -5px;
-                        right: -15px;
-                        background: $red;
-                        width: 20px;
-                        height: 20px;
-                        line-height: 21px;
-                        border-radius: 100%;
-                        text-align: center;
-                        display: block;
-                        font-size: 14px;
-                        color: #fff;
-                        font-family: $fD;
-                        font-weight: normal;
-                    }
-            }
-    }
-    .mbSearch {
-        width: 65px;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        overflow: hidden;
-        a {
-            position: relative;
-            top: 0;
-            @include transition(all .32s ease);
-            &:before{
-                content: "\e924";
-                font-family: 'icomoon';
-                font-size: 20px;
-                color: #ffffff;
-                font-weight: normal;
-            }
-        }
-    }
-    .mbLogo {
-        width: auto;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: left;
-        .logo{
-            float: none;
-            position: relative;
-            right: -30px;
-        }
-        a{
-            display: inline-block;
-            max-width: 100px;
-            margin: 0;
-            @include transition(all 0.32s ease);
-            position: relative;
-        }
-    }  
-}
-*/
 
 .basket-empty .mbHeader .mbCart a b {display:none;}
-/*
-.ems-smart-campaign {
-    display: none; 
-    height: 40px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    @include transition(all 0.2s ease); 
-}
-*/
+
 .countdown-banner { 
     /*position: fixed;*/
     width: 100%;
@@ -974,54 +662,6 @@
             font-size: 36px;
             position: relative;
             color: #fff;
-            /*&:before {
-                content: "\e903";
-                font-family: 'icomoon';
-                font-size: 30px;
-                color: $green;
-                position: absolute;
-                top: 1px;
-                left: 0;
-                animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-                transform: translate3d(0, 0, 0);
-                backface-visibility: hidden;
-                perspective: 1000px;
-                animation-delay: 10s;
-                animation-duration: 8s; 
-                animation-iteration-count: infinite;
-                animation-fill-mode: forwards;
-            }
-
-            @keyframes shake {
-                0% { transform: rotate(0); }
-                1% { transform: rotate(30deg); }
-                3% { transform: rotate(-28deg); }
-                5% { transform: rotate(34deg); }
-                7% { transform: rotate(-32deg); }
-                9% { transform: rotate(30deg); }
-                11% { transform: rotate(-28deg); }
-                13% { transform: rotate(26deg); }
-                15% { transform: rotate(-24deg); }
-                17% { transform: rotate(22deg); }
-                19% { transform: rotate(-20deg); }
-                21% { transform: rotate(18deg); }
-                23% { transform: rotate(-16deg); }
-                25% { transform: rotate(14deg); }
-                27% { transform: rotate(-12deg); }
-                29% { transform: rotate(10deg); }
-                31% { transform: rotate(-8deg); }
-                33% { transform: rotate(6deg); }
-                35% { transform: rotate(-4deg); }
-                37% { transform: rotate(2deg); }
-                39% { transform: rotate(-1deg); }
-                41% { transform: rotate(1deg); }
-
-                43% { transform: rotate(0); }
-                100% { transform: rotate(0); }
-            }
-
-            */
-
         }
         span.content {
             font-size: 18px;
@@ -1032,21 +672,6 @@
             font-family: $fM;
             letter-spacing: 1.5px; 
         }
-        /*
-        span.price {
-            font-size: 24px;
-            font-family: $fM;
-            opacity: 1;
-            @include transition(all 0.2s ease);
-            &:before {
-                    content: 't';
-                    font-family: 'tl';
-                    font-size: 22px;
-                    font-weight: normal;
-                    display: inline-block;
-            }
-        }
-        */
     }
     .countdown-wrp {
             display: table-cell;
@@ -1064,15 +689,6 @@
             position: relative;
             width: 55px;
             display: inline-block;
-            /*&:after {
-                content: '\e942';
-                font-family: 'icomoon';
-                font-size: 25px;
-                color: #fff;
-                position: absolute;
-                margin-left: 15px;
-                top: -1px;
-            }*/
         }
         .countdown {
             float: right;
@@ -1169,20 +785,32 @@
     &.type2 {
         .counter-banner-title {
             span.opportunity, span.content, span.price {
-                color: #fff;
+                color: #000;
             }
         }
         .countdown-content {
             .leftCount {
-                span, p {color: #fff;}
+                span, p {color: #000;}
             }
             .rightCount {
-                span, p {color: #fff;} 
+                span, p {color: #000;} 
             }
         }
         .countdown-close {
             &:before {
                 color: $vlightBg;
+            }
+        }
+        .countdown {
+            .countdown_row {
+                span {
+                    color: #000;
+                }
+                .countdown_section {
+                    span {
+                       color: #000;
+                    }
+                }
             }
         }
     }
@@ -1273,57 +901,6 @@
     }
 }
 
-/*
-.countdown-banner-ready {
-    .ems-smart-campaign {
-        height: 300px;
-        .countdown-banner {
-            height: 300px;
-            .countdown-close {
-                display: inline-block;
-            }
-            .countdown-open {display:none;}
-            .counter-banner-title {
-                span.content {
-                    opacity: 0;
-                }
-                span.price {
-                    opacity: 0;
-                }
-            }
-
-            // Content 
-
-            .countdown-content {
-                max-width: 1240px;
-                padding: 0 20px;
-                margin: 0 auto;
-                display: block;
-                width: 100%;
-                @include vAlign;
-                position: absolute;
-                left: 0;
-                right: 0;
-                
-                .countdown-content-inner {
-                    height: 260px;
-                    display: inline-block;
-                    width: 100%;
-                    background:url(#{$baseHref + "/UPLOAD/BANNER/sayac/sayac_icerik.png"}) center top no-repeat;
-                    .leftCount {
-                        @include vAlign;
-                    }
-                    .rightCount {
-                        @include vAlign;
-                    }
-                }
-            }
-            
-        }
-    }
-}
-
-*/
 /*Açılır Menü Akış Fixleme*/
 @media screen and (max-width:1260px) {
     .nav-main{
@@ -1784,15 +1361,23 @@
                     color: $text;
                     float: right;
                     width:auto;
-                    padding: 9px 0px 6px 0px !important;
+                    padding: 9px 10px 6px 10px !important;
                     font-size: 12px;
                     letter-spacing: 1.7px;
+                    margin: 0;
                     &:before {
                         position: absolute;
                         right: -8px;
                     }
-                    &:after {
-                        content:' A GİT ►';
+                    &.tabRct {
+                        &:after {
+                            content:"'YE GİT ►"; 
+                        }
+                    }
+                    &.tabVtz {
+                        &:after {
+                            content:"'A GİT ►"; 
+                        }
                     }
                     &:hover {
                         margin-top: 0;
@@ -1868,264 +1453,6 @@
             }
         }
     }
-    
-    /*Kategori Menu
-    .nav-main{
-        float: none;
-        width: 100%;
-        margin: 10px auto 0 auto;
-        position: relative;
-        .btn-cat-menu {
-            display: none;
-        }
-        .cat-menu-holder{
-            margin: 0;
-            .cat-menu{
-                display: block;
-                max-width: 100%;
-                margin: 0;
-                min-height: 100%;
-                height: calc(100% - 60px);
-                width: 100%;
-                overflow: auto;
-                border-radius: 0;
-                z-index: inherit;
-                &-top-link{
-                    max-width: 100%;
-                    background: $vlightBg;
-                    border: none;
-                    li a{
-                        font-size: 14px;
-                        padding: 21px 0;
-                    }
-                }
-                &-lvl-1 {
-                    margin: 0;
-                    > li.selected .cat-menu-lvl-2{ right:0; }
-                }
-                &-lvl-1 > li > a {
-                    max-width: 100%;
-                    border: none;
-                    font-size: 18px;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    &:after{
-                        content:'\e935';
-                        font-family: 'icomoon';
-                        font-size: 12px;
-                        color: $sText;
-                        position: absolute;
-                        top: 50%;
-                        right: 25px;
-                        margin-top: -6px;
-                        @include transition(all .2s ease);
-                    }
-                    &:hover{
-                        &:after{
-                            color: #ffffff;
-                        }    
-                    }
-                }
-                &-lvl-2 {
-                    min-width: inherit;
-                    padding: 0;
-                    display: none;
-                    right: 0;
-                    left: inherit;
-                    max-width: 100% !important;
-                    min-height: 100% !important;
-                    overflow:visible !important;
-                    height: 100%;
-                    position: fixed;
-                    z-index: 100;
-                    background: #ffffff;
-                    top: 0;
-                    .cat-list > ul {
-                        position: absolute;
-                        top: 60px;
-                        left: 0;
-                        width: 100%;
-                        height: calc(100% - 60px);
-                        overflow: auto;
-                    }
-                    &-back {
-                        display: table;
-                        width: 100%;
-                        height: 60px;
-                        table-layout: fixed;
-                        background: $dBlue;
-                        text-align: center;
-                        z-index: 999;
-                        i.mobile-header-back{
-                            cursor: pointer;
-                            display: table-cell;
-                            vertical-align: middle;
-                            width: 60px;
-                            text-align: center;
-                            &:before{
-                                content:'\e934';
-                                font-family: 'icomoon';
-                                font-size: 15px;
-                                color: #ffffff;
-                            }
-                        }
-                        .mobile-header-close {
-                            display: table-cell;
-                            vertical-align: middle;
-                            width: 60px;
-                            text-align: center;
-                            .icon-ico_close:before{
-                                color: #ffffff;
-                                font-size: 18px;
-                            }
-                        }
-                        span{
-                            display: table-cell;
-                            vertical-align: middle;
-                            width: auto;
-                            color: #ffffff;
-                            font-size: 18px;
-                        }
-                    }
-                    .cat-list > ul > li {
-                        width: 100%;
-                        display: table;
-                        table-layout: fixed;
-                        margin-bottom: 0;
-                        border-bottom: 1px solid $lightBg; 
-                        padding: 10px 20px 10px 20px;
-                         &:hover {
-                            &:before {
-                                display:none;
-                            }
-                         }
-                    }
-                    .prd-img, .prd-content{ display: table-cell; vertical-align: middle; }
-                    .prd-img { float: inherit; }
-                    .prd-content{ padding: 0; }
-                    .cat-name {
-                        a{
-                            font-size: 18px;
-                            color: $text;
-                            padding:15px 20px;
-                            position: relative;
-                            &:after{
-                                content:'\e935';
-                                font-family: 'icomoon';
-                                font-size: 12px;
-                                color: $sText;
-                                position: absolute;
-                                top: 50%;
-                                right: 5px;
-                                margin-top: -6px;
-                                @include transition(all .2s ease);
-                            }
-                        }
-                    }
-                    .prd-brands {
-                        display: none;
-                        position: fixed;
-                        top: 0;
-                        right: 0;
-                        width: 100%;
-                        max-height: 100%;
-                        padding: 0;
-                        height: 100%;
-                        z-index: 105;
-                        background: #ffffff;
-                        overflow: visible;
-                        .all-cat-links, .cat-menu-lvl-3-back{ display: table; width: 100%; }
-                        .all-cat-links{
-                            a.cat-links{
-                                font-family: $fM;
-                                font-size: 18px;
-                                color: $title;
-                                display: block;
-                                padding: 19px 40px 19px 20px;
-                                position: relative;
-                                border-bottom: 1px solid $lightBg;
-                                i.icon-ico_arwRight{
-                                    font-size: 10px;
-                                    color: $title;
-                                    position: absolute;
-                                    top: 50%;
-                                    margin-top: -6px;
-                                    right: 20px;
-                                    width: 12px;
-                                    height: 12px;
-                                    &:before{
-                                        font-size: 12px;
-                                    }
-                                }
-                            }
-                        }
-                        .cat-menu-lvl-3-back {
-                            background: $dBlue;
-                            text-align: center;
-                            height: 60px;
-                            i.mobile-header-back{
-                                cursor: pointer;
-                                display: table-cell;
-                                vertical-align: middle;
-                                width: 60px;
-                                text-align: center;
-                                &:before{
-                                    content: '\e934';
-                                    font-family: 'icomoon';
-                                    font-size: 15px;
-                                    color: #ffffff;
-                                }
-                            }
-                            a.mobile-header-close{
-                                display: table-cell;
-                                vertical-align: middle;
-                                width: 60px;
-                                text-align: center;
-                                i.icon-ico_close{
-                                    &:before{
-                                        color: #ffffff;
-                                        font-size: 18px;
-                                    }
-                                }
-                            }
-                            span{ 
-                                display: table-cell;
-                                vertical-align: middle;
-                                width: auto;
-                                color: #ffffff;
-                                font-size: 18px;
-                            }
-                        }
-                        ul{
-                            position: absolute;
-                            top: 120px;
-                            left: 0;
-                            width: 100%;
-                            height: calc(100% - 122px);
-                            overflow: auto;
-                            li{
-                                width: 100%;
-                                vertical-align: top;
-                                a{ 
-                                    font-size:18px;
-                                    font-family: $fD;
-                                    padding: 19px 20px;
-                                    border-bottom: 1px solid $lightBg;
-                                    &:before{ display: none; }
-                                }
-                            }
-                        }
-                    }
-                    &:before {
-                        display:none;
-                    }
-                }
-            }
-            &.lvl-2-opened {
-                .mobile-account-member { display: none; }
-            }
-        }
-    }*/
 
 
     .mobi-menu-closed .nav-main .cat-menu-holder .cat-menu-lvl-1 > li.selected .cat-menu-lvl-2, 
@@ -2152,23 +1479,7 @@
             }    
         }
     }    
-    /*Menu Animate*/
-    /*body.mobi-menu-ready {
-        overflow: hidden;
-        .site-header {
-            .ems-col-1 {
-                display: block;
-                left: 0;
-            }
-        }
-    }
-    body.mobi-menu-ready {
-        .site-header { 
-            .ems-col-1 {
-                left: 0;
-            }
-        }
-    }*/
+    
     .vailMenu { display: none; } 
 
     // Üst Sayaç Kapmanya Banner
@@ -2242,53 +1553,7 @@
             }
         }
     }
-    /*
-    .countdown-banner-ready {
-        .ems-smart-campaign {
-                height: 300px;
-                .countdown-banner {
-                    height: 400px;   
-                    padding: 10px 0 0 0; 
-                    .counter-banner-title {
-                        span.content, span.price {
-                            display:none;
-                        }
-                    }
-                }
-            .countdown-content {
-                padding: 20px 20px 0 20px !important;
-                text-align: center;
-                .countdown-content-inner {
-                    background: none !important;
-                    height: 230px !important;
-                    .leftCount {
-                        transform: none !important; 
-                        width:100% !important; 
-                        max-width: none !important;
-                        position: static !important;
-                        max-height: 80px;
-                        display: block;
-                        }
-                    .rightCount  {
-                        max-height:100px; 
-                        transform: none !important; 
-                        width:100% !important; 
-                        max-width: none !important;
-                        position: static !important;
-                        span {
-                            max-height: 30px;
-                            display: block;
-                            overflow: hidden;
-                        }
-                        .countdown-prc {
-                            margin-bottom: 0px;
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
-    } */
+    
     // Single Top Banner
     .ems-single-campaign {
         .topCampaign {

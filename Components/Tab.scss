@@ -19,7 +19,7 @@
         > li {
             position: relative;
             display: table-cell;
-            vertical-align: middle;
+            vertical-align: middle; 
             width: 25%; 
             border-top: 3px solid #fff; 
             span {
@@ -167,6 +167,7 @@
                         &.selected {
                             display: block;
                             margin: 0 auto;
+                            max-width: 1200px;
                         }
                         a.title {
                             display: none;
@@ -271,6 +272,8 @@
     height:inherit;
     overflow:visible;
     opacity:1;
+    max-width: 800px;
+    margin: 0 auto;
     ul {margin-bottom:30px;}
     ol {list-style-type: circle;}
     .popupTitleTaksit, .popupTaksit_lbfAciklama {/*display:none;*/}
@@ -299,34 +302,7 @@
     margin: 0 0 33px 50px;*/
         height:auto;
     } 
-    /*.detailShare {
-            float:right;
-            clear: both;
-            display:block;
-        & > a {
-            font-family: $fontSite;
-            font-size:14px;
-            line-height: 12px;
-            padding:12px 20px;
-            letter-spacing: 1.2px;
-            border:1px solid $borderColor;
-            margin:0 0 30px 50px;
-            display:inline-block;
-            &:hover {
-                color:#fff;
-                background:$marineBlue;
-            }
-            &:before {
-                content: "\e916"; 
-                font-family: 'icomoon';
-                font-size: 17px;
-                margin-right:16px;
-            }
-        }
-        .ems-prd-social {
-            a {width:100%;}
-        }
-    }*/
+    
     .popupTaksit {  
          td, th {}
         .taksit_banka {
@@ -343,7 +319,7 @@
 
 /*ürün detay aciklama html template*/
 .spanTabUrunAciklama {overflow:hidden;}
-.spanTabUrunAciklama .row {clear:both; border-top:1px solid $borderColor; font-weight: normal; width: 100%; max-width: 900px; margin: 0 auto;}
+.spanTabUrunAciklama .row {clear:both; /*border-top:1px solid $borderColor;*/ font-weight: normal; width: 100%; max-width: 900px; margin: 0 auto;}
 .spanTabUrunAciklama .row:first-child {border-top:none;}
 .spanTabUrunAciklama .row h3 {font-size:28px; line-height:30px; margin-bottom:30px;}
 .spanTabUrunAciklama .row .dText * {font-size:15px; line-height:1.3; font-weight: normal;}
@@ -402,7 +378,7 @@
     }
 }
 .productInfo {
-    span.makyaj, span.kozmetik {
+    span.makyaj, span.kozmetik, span.uyari {
         padding: 20px;
         background: #fff;
         font-size: 12px;
@@ -463,6 +439,91 @@
 /*free HTML*/
 .spanTabUrunAciklama .tFreeHTML {}
 .spanTabUrunAciklama .tFreeHTML .full {padding:0;}
+
+.spanTabUrunAciklama .lTable {
+    border: 0;
+    > div {width: 100%; margin: 0 0 30px 0;}
+    span {
+        color: $title;
+        font-size: 18px !important;
+        /*margin-bottom: 15px !important;*/
+        display: block;
+        }
+    p {
+        color: $text;
+        font-size: 14px;
+    }
+    table {
+        background: #fff;
+        padding: 30px 30px 10px 30px;
+        margin: 20px 0;
+        tr { 
+                border-bottom:1px solid $vlightBg; 
+                display: table; 
+                width: 100%;
+                table-layout: fixed;
+            td {
+                display: table-cell;
+                padding: 14px 0 10px 0; 
+                font-size: 14px;
+                color: $text;
+            }
+            &:last-child {border: 0;}
+            &.tableTitle {
+                padding-bottom: 15px;
+                border: 0;
+                td {
+                    font-size: 18px;
+                    color: $title;
+                }
+            }
+        } 
+    }
+}
+
+.spanTabUrunAciklama .lProperty {
+    margin-bottom: 20px;
+    > div {
+        width: 100%; 
+        margin: 0 0 30px 0;
+        > span {
+            color: $title;
+            font-size: 24px !important;
+            margin-bottom: 15px !important;
+            display: block;  
+            color: $title;
+        }
+        > p {
+            line-height: 1.93 !important;
+            margin-bottom: 20px;
+            b {
+                font-weight: bold !important;
+            }
+        }
+    }
+    ul {
+        display: table;
+        width: 100%;
+        border-spacing: 10px;
+        border-collapse: separate;
+        table-layout: fixed;
+        li {
+            display: table-cell;
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            span {
+                font-weight: bold !important;
+                margin-bottom: 15px;
+                color: $text;
+                display: block;
+            }
+            p {
+                color: $title;
+            }
+        }
+    }
+}
 
 /*textHoverVideo*/
 .texthovervideo {font-family:inherit; font-size:inherit; color:inherit; background:url(/images/frontend/playIcon.png) no-repeat right center; line-height:24px; padding:10px 35px 10px 0;}
@@ -618,6 +679,16 @@
         display: inline-block;  
         img {width: 100%;}
     } 
+    .spanTabUrunAciklama .lProperty {
+        ul {
+            border-spacing: 0;
+            li {
+                width:48%;
+                display: inline-block;
+                margin: 1%; 
+            }
+        }
+    }
     .ems-tab ul.lvl1 {
         border: 0;
         li{

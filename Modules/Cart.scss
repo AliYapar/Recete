@@ -28,7 +28,7 @@
                      display: inline-block;
                      vertical-align: middle;
                      @include transition(all 0.2s ease);
-                     span {margin-top: 7px;}
+                     span {margin-top: 3px;} 
                 }
                 i.icon-ico_basket {
                     display: inline-block;
@@ -65,16 +65,6 @@
                 font-family: $fD;
                 display: none;
             }
-            /*&:after{
-                @include transition(all 0.2s ease);
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                width: 100%;
-                height: 12px;
-                background: $dBlue;
-            }*/
         }
         &:after {
             content:'';
@@ -144,33 +134,75 @@
                 #lblUrunTutari {
                     text-align: right;
                     width: 60%;
-                    /*
-                    .d {
-                        font-size: 12px; 
-                        position: relative;
-                        top: 1px;
-                        vertical-align: super;
-                    }
-                    &:before {
-                            content: 't';
-                            font-family: $tl;
-                            font-size: 20px;
-                            font-weight: bold;
-                            display: inline-block;
-                            color: $dBlue;
-                            margin-right: 1px;
-                        }
-                    */
+                }
+            }
+        }
+        .mod-mini-cart-notice {
+            font-size: 12px;
+            padding: 10px;
+            background: #ced0d7;
+            border-top: 1px solid $sText;
+            color: #737880;
+            line-height: 15px;
+            b {
+                font-size:12px; 
+                margin: 0;
+                display: block;
+                color: $title;
+            }
+            i {
+                font-size: 10px;
+                background: $green;
+                border-radius: 100%;
+                color: #fff;
+                margin-right: 3px;
+                width: 13px;
+                height: 13px;
+                display: inline-block;
+                text-align: center;
+                &:before {
+                    font-size: 8px;
+                    margin-top: 3px;
+                    display: inline-block;
                 }
             }
         }
     }
-    .kutuSepet_icerik { padding-right: 20px; max-height: 320px; overflow: auto; }
+    .kutuSepet_icerik {max-height: 320px; overflow: auto; display: grid;}
+    .kutuSepet_icerik .esi4-con {
+        /*border-top:1px solid $vlightBg; margin-top:10px;*/ padding-top: 10px; 
+        &:before {
+            content:''; 
+            width:68px; 
+            height: 20px; 
+            background:url(#{$baseHref + "/images/frontend/svg/logo.svg"}) no-repeat left top;
+            background-size: contain;
+            display: block; 
+            margin: 20px 0 0 20px;
+        }
+    }
+    .kutuSepet_icerik .esi5-con {
+        &:before {
+            content:''; 
+            width:68px; 
+            height: 20px;  
+            background:url(#{$baseHref + "/images/frontend/svg/vitezon.svg"}) no-repeat left top;
+            background-size: contain;
+            display: block; 
+            margin: 20px 0 0 20px;
+        }
+    }
     .kutuSepet_icerik .ems-col {
         display:inline-block;
         width:100%;
         padding: 10px 0 10px 30px;
         background: #ffffff;
+        &.esi5 {
+            order: 2;
+        }
+        &.esi4 {
+            order: 1;
+        }
     }
     .kutuSepet_icerik .ems-col:first-child{
         padding-top: 20px;
@@ -268,23 +300,6 @@
             font-size: 14px;
             float: left;
             margin-right: 10px;
-            /*
-            .d {
-                font-size: 10px; 
-                position: relative;
-                top: 1px;
-                vertical-align: super;
-            }
-            
-            &:before {
-                content: 't';
-                font-family: $tl;
-                font-size: 12px;
-                font-weight: normal;
-                display: inline-block;
-                margin-right: 1px;
-            }
-            */
         } 
     }
 }
@@ -323,7 +338,15 @@
         .mod-mini-cart-header{
             .ems-cart-info:after{ display: none; }
         }
-        .mod-mini-cart-body { display: none; }
+        .mod-mini-cart-body { 
+            /*display: none;*/
+            .swiper-container, .col2 {
+                display: none;
+            }
+            .mod-mini-cart-notice {
+                border: 0;
+            }
+        }
     }
     .vailCart { display: none; }
 
@@ -381,15 +404,7 @@
 
 //tl ikonu
 .currency-ico span font, .pnlDipToplamTable td > span {
-    /*
-    &:before {
-        content: "t";
-        font-family: tl;
-        font-size: .8em;
-        margin-right: .1em;
-        display: inline-block;
-    }
-    */
+    
 }
 
 .page-cart {
@@ -420,7 +435,7 @@
         margin-top: 30px;
         text-align: center;
         a{
-            display: inline-block;
+            /*display: inline-block;*/ 
         }
     }
     //layout
@@ -1009,6 +1024,7 @@
                             font-size: 16px;
                             min-width: 110px;
                             max-width: 110px;
+                            min-height: 200px;
                             &:first-child {
                                 margin-left: 0;
                             }
@@ -1894,7 +1910,7 @@
                 transform: translate3d(0, 0, 0);
                 backface-visibility: hidden;
                 perspective: 1000px;
-                animation-delay: 10s;
+                animation-delay: 6s;
                 animation-duration: 6s; 
                 animation-iteration-count: infinite;
                 animation-fill-mode: forwards;
@@ -1947,19 +1963,19 @@
         .ems-grid-header{
             text-align: left;
             border-radius: 10px 10px 0 0;
-            background: $green;
+            background: linear-gradient(-90deg, $lBlue, $blue);
             padding: 10px 17px;
             margin-top: 20px;
-            > span{ font-family: $fB; color: #ffffff; font-size: 18px; }
+            > span{ font-family: $fD; color: #ffffff; font-size: 14px; }
         }
         .ems-grid-row{
-            border-color:$green;
+            border-color:$lBlue;
             border:none;
             > div { border:none;}
             border-radius: 0 0 10px 10px;
             border-width: 0 2px 2px 2px;
             border-style: solid;
-            border-color: $green;
+            border-color: $lBlue;
             .ems-grid-img{
                 width: 20%;
                 img { max-width: 90px; }
@@ -1970,6 +1986,9 @@
                 > a {
                     display: block;
                     padding-bottom: 10px;
+                    span {
+                        font-size: 18px;
+                    }
                 }
                 .ems-grid-price, .ems-grid-price-total {
                     display: inline-block;
@@ -1979,23 +1998,23 @@
                 .ems-grid-price {
                     padding-right: 10px;
                     text-decoration: line-through;
-                    &:before{
+                    /*&:before{ 
                         font-family:$tl;
                         content:"t";
                         font-size:24px;
                         font-size: calc(11px + 0.5vw);
                         padding-right: 3px;
                         display: inline-block;
-                    }
-                        font-family: $fM;
+                    }*/
+                        font-family: $fD;
                         color: $sText;
-                        font-size: 24px;
-                        font-size: calc(14px + 0.5vw);
+                        font-size: 14px;
+                        /*font-size: calc(14px + 0.5vw);*/
                     span {
-                        font-family: $fM;
+                        font-family: $fD;
                         color: $sText;
-                        font-size: 24px;
-                        font-size: calc(14px + 0.5vw);
+                        font-size: 14px;
+                        /*font-size: calc(14px + 0.5vw);*/
                     } 
                 }
                 .ems-grid-price-total{
@@ -2003,12 +2022,12 @@
                     color:$green;
                     font-size: 30px;
                     font-size: calc(15px + 0.5vw);
-                    &:before{
+                    /*&:before{
                         font-family:$tl;
                         content:"t";
                         font-size:30px;
                         font-size: calc(11px + 0.5vw);
-                    }
+                    }*/
                     span{
                         font-family: $fB;
                         color:$green;
@@ -2028,25 +2047,25 @@
                 padding-right: 30px;
                 padding-left: 30px;
                 a.btnDefault {
-                    background: $green;
+                    background: linear-gradient(-90deg, $lBlue, $blue);
                     width: 100%;
                     padding-top: 14px;
                     padding-bottom: 12px;
                     span{ font-size: 12px; }
                     &:hover{
-                        background: $hGreen;
+                        background: linear-gradient(-90deg, $blue, $dBlue);
                     }
                 }
                 .total-gain{
                     text-align: center;
                     padding: 10px;
-                    > span { color:$green; display: inline-block; }
+                    > span { color:$lBlue; display: inline-block; }
                     .text { font-size:12px; font-family:$fM; }
                     .total{
                         font-size:18px;
                         font-family:$fB;
                         padding-left: 5px;
-                        i:before{ font-family:$tl; content:"t"; font-size:14px; }
+                        /*i:before{ font-family:$tl; content:"t"; font-size:14px; }*/
                     }
                 }
             }
@@ -2061,6 +2080,57 @@
         display: none !important;  
         .ems-cart-ntf-message {display: none !important;}
     }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0); }
+  1% {
+    transform: rotate(30deg); }
+  3% {
+    transform: rotate(-28deg); }
+  5% {
+    transform: rotate(34deg); }
+  7% {
+    transform: rotate(-32deg); }
+  9% {
+    transform: rotate(30deg); }
+  11% {
+    transform: rotate(-28deg); }
+  13% {
+    transform: rotate(26deg); }
+  15% {
+    transform: rotate(-24deg); }
+  17% {
+    transform: rotate(22deg); }
+  19% {
+    transform: rotate(-20deg); }
+  21% {
+    transform: rotate(18deg); }
+  23% {
+    transform: rotate(-16deg); }
+  25% {
+    transform: rotate(14deg); }
+  27% {
+    transform: rotate(-12deg); }
+  29% {
+    transform: rotate(10deg); }
+  31% {
+    transform: rotate(-8deg); }
+  33% {
+    transform: rotate(6deg); }
+  35% {
+    transform: rotate(-4deg); }
+  37% {
+    transform: rotate(2deg); }
+  39% {
+    transform: rotate(-1deg); }
+  41% {
+    transform: rotate(1deg); }
+  43% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(0); } 
 }
 
 .odeme3d {
@@ -2114,11 +2184,12 @@
     .page-cart {
         .ems-container {
             padding-bottom: 55px;
+            /*padding-bottom: 0;*/
             padding-left: 0;
         }
         &.step1 {
             .ems-container {
-                padding-bottom: 60px;
+                /*padding-bottom: 60px;*/
             }   
         }
         .ems-page-order-cart{
@@ -2212,8 +2283,12 @@
                     margin-left: 0;
                     padding-left: 10px;
                     padding-right: 10px;
+                    margin-right: 10px;
                     &:first-child {
                         margin-top: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
                     }
                 }
                 .ems-delivery-tab-header {

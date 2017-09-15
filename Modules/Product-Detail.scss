@@ -386,40 +386,7 @@
                 position: relative;
                 text-align: center;
                 z-index: 1;
-                /*
-                .mrkWrp {
-                    margin: 30px auto 20px auto;
-                    display: table;
-                    padding-left: 70px;
-                    display: inline-block !important;
-                    .detayMarka {
-                        display: table-cell !important;
-                        vertical-align: middle;
-                        a {
-                            display:inline-block;
-                            img {
-                                display: inline-block !important;
-                                height: 50px;
-                            }
-                        }
-                    }
-                    .detayMarkaYazı {
-                        display:table-cell;
-                        vertical-align: middle;
-                        .urunDetay_urunParametre {
-                            margin-left: 10px;
-                            border-left: 1px solid $borderColor;
-                            padding: 10px 10px 10px 30px;  
-                            ul {
-                                li {
-                                    color: $text;
-                                    font-size: 14px;
-                                }
-                            }
-                        }
-                    }
-                }
-                */
+                
                 &.fixed {
                     position: fixed;
                 }
@@ -432,10 +399,11 @@
                 .detail-prop {
                     padding:40px 0 20px 0;
                     ul {
-                        display:table;
+                        display:inline-block; 
                         margin: 0 auto;
+                        text-align: center;
                         li {
-                            display:table-cell;
+                            display:inline-block;
                             text-align: center;
                             padding: 0 10px;
                                 span {
@@ -461,6 +429,12 @@
                                         font-family: $fD;
                                         margin-top: 10px;
                                     }
+                                    &.orjinal-urun:before {
+                                        content: "\e928";
+                                    }
+                                    &.orjinal-urun:after {
+                                        content: "Orjinal Ürün";
+                                    }
                                     &.orijinal_urun:before {
                                         content: "\e928";
                                     }
@@ -473,16 +447,16 @@
                                     &.alkolsuzdur:after {
                                         content: "Alkolsüzdür";
                                     }
-                                    &.sabun_icermez:before { 
+                                    &.sabun-icermez:before { 
                                         content: "\e93a";
                                     }
-                                     &.sabun_icermez:after {
+                                     &.sabun-icermez:after {
                                         content: "Sabun İçermez";
                                     }
-                                    &.parfum_icermez:before {
+                                    &.parfum-icermez:before {
                                         content: "\e938";
                                     }
-                                     &.parfum_icermez:after {
+                                     &.parfum-icermez:after {
                                         content: "Parfüm İçermez";
                                     }
                                     &.koruyucu_icermez:before {
@@ -491,11 +465,59 @@
                                      &.koruyucu_icermez:after {
                                         content: "Koruyucu İçermez";
                                     }
-                                    &.paraben_icermez:before {
+                                    &.paraben-icermez:before {
                                         content: "\e937";
                                     }  
-                                     &.paraben_icermez:after {
+                                    &.paraben-icermez:after {
                                         content: "Paraben İçermez";
+                                    }
+                                    &.renklendirici-icermez:before {
+                                        content: "\e94c";
+                                    }
+                                    &.renklendirici-icermez:after {
+                                        content: "Renklendirici İçermez";
+                                    }
+                                    &.laktoz-icermez:before {
+                                        content: "\e94a";
+                                    }
+                                    &.laktoz-icermez:after {
+                                        content: "Lakoz İçermez";
+                                    }
+                                    &.koruyucu-icermez:before {
+                                        content: "\e949";
+                                    }
+                                    &.koruyucu-icermez:after {
+                                        content: "Koruyucu İçermez";
+                                    }
+                                    &.gluten-icermez:before {
+                                        content: "\e946";
+                                    }
+                                    &.gluten-icermez:after {
+                                        content: "Gluten İçermez";
+                                    }
+                                    &.gdo-icermez:before {
+                                        content: "\e945";
+                                    }
+                                    &.gdo-icermez:after {
+                                        content: "GDO İçermez";
+                                    }
+                                    &.et-icermez:before {
+                                        content: "\e944";
+                                    }
+                                    &.et-icermez:after {
+                                        content: "Et İçermez";
+                                    }
+                                    &.domuz-icermez:before {
+                                        content: "\e943";
+                                    }
+                                    &.domuz-icermez:after {
+                                        content: "Domuz İçermez";
+                                    }
+                                    &.aspartam-icermez:before {
+                                        content: "\e941";
+                                    }
+                                    &.aspartam-icermez:after {
+                                        content: "Aspartam İçermez";
                                     }
                                 }
                             }
@@ -570,29 +592,7 @@
                         color: $sText !important;
                         font-weight: normal !important;
                     }
-                    /*&:before { 
-                        content: '!';
-                        background: $red;
-                        color: #fff;
-                        border-radius: 100%;
-                        display: inline-block;
-                        width: 15px;
-                        height: 15px;
-                        text-align: center;
-                        line-height: 16px;
-                        margin-right:5px;
-                        font-size: 12px;
-                        font-family:$fB;
-                    }*/
-                    /*&:after {
-                        content: '\e929';
-                        font-family: 'icomoon';
-                        font-size: 14px;
-                        position: absolute;
-                        top: -10px;
-                        left: 20px;
-                        color: #f1f1f1;
-                    }*/
+                    
                     &:empty {display:none;}
                 }
             }
@@ -691,21 +691,12 @@
                     float: left;
                     font-family: $fD;
                     .d {
-                        /*font-size: 20px; */
+                        
                     }
                     .pb1 {
-                        /*vertical-align: super;
-                        font-size: 20px;*/
+             
                     }
-                    /*.urunDetay_satisFiyat:before {
-                        content: 't';
-                        font-family: 'tl';
-                        font-size: 23px;
-                        font-weight: normal;
-                        display: inline-block;
-                        margin-right:5px;
-                        display:none;
-                    }*/
+                    
                     small {
                         font-size: 12px;
                         color: $rText;
@@ -1101,28 +1092,12 @@
                         font-size: 14px;
                         font-family: $fD;
                         span {color: $dlightBg;} 
-                        /*&:before {
-                            content: 't';
-                            font-family: 'tl';
-                            font-size: 13px;
-                            font-weight: normal;
-                            display: inline-block;
-                        }*/
+                        
                     }
                     .sonFiyat {
-                        /*&:before {
-                            content: 't';
-                            font-family: 'tl';
-                            font-size: 14px;
-                            font-weight: normal;
-                            display: inline-block;
-                        }*/
+                        
                         .d {
-                            /*font-size: 12px; 
-                            position: relative;
-                            top: 2px;
-                            vertical-align: super;
-                            */
+                            
                         }
                     }
                 }
@@ -1144,12 +1119,7 @@
                 }
             }
             &-icons {
-                /*
-                display: none;
-                position: absolute;
-                left: 0;
-                top: 0;
-                */
+                
                 margin: 0;
                 height: auto;
                 padding:0; 
@@ -1593,7 +1563,7 @@
             }
             &.item-2 {
                 .swiper-inner {
-                    height: 60px;
+                    height: 130px; 
                 }
             }
         }
@@ -2062,98 +2032,6 @@
     }
 }
 
-
-/* Ürün Üst Kayan Menü
-
-.prd-compact {
-    width:100%;
-    top:-100%;
-    background: #fff;
-    @include transition(all 2s ease-out) 
-    &-inner {
-        width:100%;
-        max-width:$siteContainerWidth;
-        margin:0 auto;
-        padding:0 15px 0 25px;
-            .prd-compact-image {
-                float:left;
-                    img {
-                        width:93px; 
-                        height:70px;
-                        display:block;
-                    }
-                }
-            .prd-compact-group {
-                width:auto;
-                margin: 0 260px 0 106px;
-                display:block;
-                &-inner {
-                    width:100%;
-                    display:table;
-                    height: 70px;
-                    .prd-compact-name {
-                        width:60%;
-                        font-size:30px;
-                        display: table-cell;
-                        vertical-align: middle;
-                        font-family: $fM;
-
-                    }
-                    .prd-compact-code {
-                        width:20%;
-                        font-size:16px;
-                        display: table-cell;
-                        vertical-align: middle;
-                        }
-                    .prd-compact-price {
-                        width:20%;
-                        display: table-cell;
-                        vertical-align: middle;
-                        font-size: 36px;
-                        line-height: 30px;
-                        text-align: center;
-                        color: $dBlue;
-                        font-family: $fB;
-                        white-space: nowrap;
-                        span.d {
-                            font-size: 36px;
-                            vertical-align: top;
-                            position: relative;
-                            top: 1px;
-                             }
-                        &:before {
-                                content: 't';
-                                font-family: 'tl';
-                                font-size: 23px;
-                                font-weight: normal;
-                                display: inline-block;
-                                margin-right: 5px;
-                            }
-                        }   
-                    }
-            }
-            .prd-compact-cart-btn {
-                float:right;
-                margin: 9px 0;
-                .urunDetay_urunAdet {
-                    display:none;
-                }
-                a {
-                    background:$green;
-                    font-size: 18px;
-                    &:hover {
-                        background: #2cc66f;
-                    }
-                }
-            }
-        }
-        &.compact-ready{
-            top:0;
-            }
-    }
-
-*/
-
 .cargoInfo {
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -2575,7 +2453,7 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
 .urunOzellik .gridUrunOzellikDetayIcerik {font-weight:normal;}
 
 .detail-video-popup {max-width: 400px;}
-.detail-video-popup a.close-button {
+.detail-video-popup a.close-button, .table-popup a.close-button {
     height: auto !important;
     width: auto !important;
     top: 10px !important;
@@ -2589,31 +2467,14 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
     }
 }
 
+.table-popup {max-height: 500px; max-width: 700px; padding: 40px !important; overflow-x: hidden; background:$lightBg !important; }
+
+
+
 /********** fullscreen gallery **********/
 .gallery-ready{overflow:hidden;}
 .gallery-ready .minus-gallery{display:block;} 
-/*.gallery-ready .minus-gallery:after {
-    content:'Scroll ile görseli yakınlaştırabilirsiniz.'; 
-    font-family: $fM; 
-    color: $title; 
-    position:fixed; 
-    padding: 10px 30px 10px 60px; 
-    white-space: nowrap; 
-    bottom:0px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    text-align: center; 
-    display:inline-block; 
-    background: #fff url(#{$baseHref + "/images/frontend/scroll.gif"}) left no-repeat;
-    animation: zoomIco 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    backface-visibility: hidden;
-    perspective: 1000px;
-    animation-delay: 2s;
-    animation-duration: 8s; 
-    animation-iteration-count:1;
-    animation-fill-mode: forwards;
-    opacity: 0;
-} */
+
 
 @keyframes zoomIco {
                     0% { opacity:0; }  
@@ -2678,7 +2539,7 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
             margin: 0 auto;
             max-height: 100px;
             height: 100% !important;
-            .custom-popup-footer {display:none;} 
+            .custom-popup-footer {/*display:none;*/} 
             .purchasing-widget {
                 width:100%; 
                 overflow: hidden;
@@ -2716,6 +2577,11 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                     }
                 }
                 .swiper-button-next, .swiper-button-prev {display:none;}
+                &.no-controls {
+                    .ems-prd {
+                        width: 200px;
+                    }
+                }
             }
         }
     }
@@ -2759,9 +2625,9 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                         text-align: left;
                         overflow:visible;
                         h1 {
-                            color:$title;
-                            font-size: 14px;
+                            color:$text;
                             text-align: left;
+                            font-size: 12px;
                         }
                         a {
                             font-size: 12px;
@@ -2781,19 +2647,7 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                         display: inline-block;
                         position: relative;
                         display: table;
-                        /*&:before {
-                            content:'\e932';
-                            font-family: 'icomoon';
-                            color: #fff;
-                            background: $dBlue;
-                            padding: 18px;
-                            border-radius: 100%;
-                            position: absolute;
-                            right: 20px;
-                            top: 30px;
-                            font-size: 24px;
-                            font-weight: bold;
-                        }*/
+                        
                     }
 
                      .short-info-label {
@@ -2843,15 +2697,11 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                         height: auto;
                         &:before, .ems-prd-price-first, .ems-prd-price-taksit {display:none;}
                         .urunDetay_satisFiyat {
-                            font-size: 24px;
-                            /*&:before {
-                                content: 't';
-                                font-family: 'tl';
-                                font-size: 18px;
-                                font-weight: normal;
-                                display: inline-block; 
-                                margin-right: 5px;
-                            }*/
+                            text-align: left;
+                            font-size: 18px;
+                            color: $text; 
+                            font-family: "regular";
+                            white-space: nowrap;
                         }
                         .urunListe_satisFiyat {
                             text-align: left;
@@ -2923,21 +2773,9 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                                     right:20px;
                                     top:10px;
                                     .d {
-                                        /*
-                                        font-size: 12px;
-                                        position: relative;
-                                        top: 3px;
-                                        vertical-align: super;
-                                        */
+                                       
                                     }
-                                    /*&:before {
-                                        content: 't';
-                                        font-family: 'tl';
-                                        font-size:16px;
-                                        font-weight: normal;
-                                        display: inline-block;
-                                        margin-right: 5px;
-                                    }*/
+                                    
                                 }
                                 .grLink {
                                     width: 110px;
@@ -3185,36 +3023,7 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
         position: relative;
         .ems-prd-detail-inner {
             padding: 0;
-            /*.btnFavoriEkle {
-                width: auto;
-                margin-left: 0;
-                position: absolute;
-                top: 0;
-                right: 0;
-                background: none;
-                padding: 5px 20px;
-                &:before {
-                    font-family: 'icomoon';
-                    content: '\e90f';
-                    color: $dBlue;
-                    font-size: 20px;
-                    padding: 15px 0;
-                    display: block;
-                    font-weight: bold;
-                }
-                &.selected {
-                    &:before { 
-                        content:'\e90e';
-                    }
-                }
-            }*/
             .ems-prd-dtlCode-akt {
-                /*position: absolute;
-                top: 25px;
-                right: 0;
-                left: 0;
-                margin: 0 auto;
-                text-align: center;*/
                 display: inline-block;
                 float:none;
             }
@@ -3383,13 +3192,6 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                                 font-family: $fM;
                                 font-size: 18px;
                                 span[id$="lblURN_ADET"] {display:inline-block; color: #fff;}
-                               /* &:after {
-                                    content:'\e904';
-                                    font-family: 'icomoon';
-                                    color: #fff;
-                                    font-size: 10px;
-                                    margin-left: 10px;
-                                }*/
                                 i {
                                    &:before {
                                       color: $dlightBg;
@@ -3519,9 +3321,7 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
                         width: 100%;
                         text-align: center;
                         &:before {
-                            /*display: inline-block;
-                            float: none;
-                            margin-bottom: 10px;*/
+                            
                         }
                         span {
                             float: none;
@@ -3948,5 +3748,6 @@ a#lnkYorumYaz span,  a#lnkIlkYorum span {font-size: 14px;}
             margin-left:0;
         }
     }
+    .table-popup {max-height: 100% !important;}
 
 }

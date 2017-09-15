@@ -243,14 +243,7 @@
                                             }
                                             .ems-prd-price-selling {
                                                 font-size:14px;
-                                                text-align: left;
-                                                /*.d {
-                                                    font-size: 10px;
-                                                    position: relative;
-                                                    top: 2px;
-                                                    vertical-align: super;
-                                                }*/
-
+                                                text-align:left; 
                                             }
                                             .ems-prd-price {
                                                 margin: 0;
@@ -527,45 +520,6 @@
                         }
                 }
         }
-        /*.fixHolderInside.fixed{ 
-                .compareSlider{
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    z-index: 99;
-                    background: #fff;
-                    display: inline-block;
-                    vertical-align: top;
-                    border-bottom:1px solid $borderColor;
-                    border-top:1px solid $borderColor;
-                    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.17);
-                        .mask{
-                            max-width: $siteContainerWidth;
-                            margin: 0 auto;
-                                li{
-                                    margin-right: 0;
-                                    width: 33.33% !important;
-                                    border:none;
-                                        .urunKiyaslamaUrun{
-                                            display: inline-block;
-                                            width: 100%;
-                                                .urunKiyaslamaUrun_resim{
-                                                    float: left;
-                                                    width: 100px;
-                                                    border: 1px solid #fff;
-                                                }
-                                                .urunKiyaslamaUrun_urnAd{
-                                                    padding: 20px 20px 9px 120px;
-                                                }
-                                                .urunKiyaslamaUrun_fiyat{
-                                                    padding: 0px 20px 20px 120px;
-                                                }
-                                        }
-                                }
-                        }
-                }
-        }*/
 }
 
 /* Kıyaslama Sayfası */
@@ -593,11 +547,6 @@
 .ui-autocomplete li .search-result {}
 .ui-autocomplete li .search-result a {display:block;padding:10px 0;}
 
-/*fixed column
-.compareWrapper .fixHolderInside.fixed .addProduct {height:auto;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun .urunKiyaslamaUrun_urnAd {padding-top:20px;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun {height: 141px;}
-*/
 /*comapre slider*/
 .compareWrapper .compareSlider {width:78%; position:relative; float:right;}
 .compareWrapper .compareSlider .mask {width: 100%;border: 0;overflow: hidden;position: relative;margin: 0 auto;border-style: solid;border-color: $borderColor;border-width: 1px;border-radius:3px;max-height: 320px;}
@@ -662,12 +611,7 @@
 .comSpecfilter ul li.selected a{ color:red; }
 .specItem .specContent tr.hiddenElem, .specItem.hiddenElem{ display:none !important; }
 /**/
-/*
-.compareWrapper .fixHolderInside{ width:100%; max-width:1200px; display:inline-block; z-index:2; background:#FFF; }
-.compareWrapper .fixHolderInside.fixed {position:fixed;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun {padding: 0 25px;}
-.compareWrapper .fixHolderInside.fixed .compareSlider .mask > ul > li .urunKiyaslamaUrun .urunKiyaslamaUrun_resim{ display:none; } 
-*/
+
 /*compare scrolltop*/
 .compareWrapper .fixHolderInside a.scrollTop{ display:none; }
 @media screen and (min-width:960px) {
@@ -681,7 +625,7 @@
         .compareMenuHolder {
             padding:0;
                 .compareMenu {
-                    a.btnClear {display: none;}
+                    a.btnClear {display: none;}  
                 }
             }
         .compareContent {

@@ -15,6 +15,42 @@
   -moz-osx-font-smoothing: grayscale;
 } 
 
+.icon-ico_orijinal-urun:before {
+  content: "\e928";
+  color: #6d6e70;
+}
+.icon-ico_aspartam-icermez:before {
+  content: "\e941";
+  color: #6d6e70;
+}
+.icon-ico_domuz-icermez:before {
+  content: "\e943";
+  color: #6d6e70;
+}
+.icon-ico_et-icermez:before {
+  content: "\e944";
+  color: #6d6e70;
+}
+.icon-ico_gdo-icermez:before {
+  content: "\e945";
+  color: #6d6e70;
+}
+.icon-ico_gluten-icermez:before {
+  content: "\e946";
+  color: #6d6e70;
+}
+.icon-ico_koruyucu-icermez:before {
+  content: "\e949";
+  color: #6d6e70;
+}
+.icon-ico_laktoz-icermez:before {
+  content: "\e94a";
+  color: #6d6e70;
+}
+.icon-ico_renklendirici-icermez:before {
+  content: "\e94c";
+  color: #6d6e70;
+}
 .icon-ico_oil:before {
   content: "\e937";
 }
@@ -212,12 +248,6 @@
     text-indent:-999em; 
     transition: all 0.2s ease;
 	font-size: 0px;
- 	@at-root {
-		.asd, .lang-tr { background:url(#{$baseHref + "/images/frontend/sprite.png"}) no-repeat; }
-		
-		.lang-tr {background-position:0 0; width:15px; height:10px;}
-		
-	}
 
 }
 

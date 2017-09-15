@@ -88,7 +88,7 @@
              > span { height: 25px; }
         }
         &-price {
-            &-first { display: none; }
+            &-first { /*display: none;*/ }
         }
     }
 }
@@ -129,7 +129,7 @@
     left: -65px;
 }
 .swiper-button-prev i::before {
-    content: "\e918";
+    content: "\e91e";
     font-family: "icomoon";
     font-size: 12px;
 }
@@ -137,7 +137,7 @@
     right: -65px;
 }
 .swiper-button-next i::before {
-    content: "\e923";
+    content: "\e92b";
     font-family: "icomoon";
     font-size: 12px;
 }
